@@ -1,5 +1,4 @@
-version: '3.8'
-name: image-caching-server-nodejs
+version: '3.9'
 
 services:
   nginx:
@@ -25,7 +24,7 @@ services:
     command: [ "sh", "-c", "npm install && npx pm2-runtime start app.json" ]
     environment:
       NODE_ENV: development
-      # DOMAIN: img.joball.tw
+      # DOMAIN: img.pardn.io
     restart: unless-stopped
     networks:
       - frontend_network
